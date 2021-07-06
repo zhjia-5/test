@@ -1,42 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    #div{
-      width: 100px;
-      height: 100px;
-      background-color: red;
-    }
-  </style>
-  <div id='div'></div>
-  <div class='div'></div>
-</head>
-<body>
-  <script>
-
-    alert("12345789")
-
-
-    const div = document.getElementById('div');
-    const str = `abc`;
-    const str1 = `我是${str}中国人`;
-    alert(str1)
-
-
-    const bool = true;
-    const mybool = bool ?? "错误";
-    alert(mybool)
-
-
-    const divHTML = document.getElementsByTagName('div');
-    Array.from(divHTML).forEach((item)=>{
-      alert(item);
-    })
-
-  </script>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5新标签</title>
+		<style type="text/css">
+			ul,
+			li {
+				list-style: none;
+				font-size: 3rem;
+			}
+			input{
+				width: 500px;
+				height: 80px;
+				font-size: 3rem;
+			}
+			.slide-box {
+				margin-top: 50px;
+				display: -webkit-box;
+				overflow-x: auto;
+				/*适应苹果*/
+				-webkit-overflow-scrolling: touch;
+				font-size: 3rem;
+			}
+		 
+			.slide-item {
+				width: 300px;
+				height: 300px;
+				border: 1px solid #ccc;
+				margin-right: 30px;
+				background: pink;
+			}
+		 
+			/*隐藏掉滚动条*/
+			.slide-box::-webkit-scrollbar {
+				display: none;
+			}
+			</style>
+		
+	</head>
+	<body>
+		<ul class="slide-box">
+			<li class="slide-item">1</li>
+			<li class="slide-item">2</li>
+			<li class="slide-item">3</li>
+			<li class="slide-item">4</li>
+			<li class="slide-item">5</li>
+		</ul>
+		 <form action="http://www.baidu.com">
+		<ul>
+			<li>日期：<input type="date"></li><!-- chrome支持，Safari，ie不支持 -->
+			<li>时间：<input type="time"></li>
+			<li>第几周：<input type="week"></li>
+			<li>详细时间：<input type="datetime-local"></li>
+			<li>数量：<input type="number"></li><!-- chrome支持，Safari，ie不支持-->
+			<li>邮箱：<input type="email"></li><!-- chrome支持，Safari，ie不支持-->
+			<li>颜色：<input type="color"></li><!-- chrome支持，Safari，ie不支持-->
+			<li>音量控制条：<input type="range" min="1" max="100" name="range"></li>
+			<li>搜索：<input type="search"></li><!-- chrome支持，Safari支持一点，Firefox，ie不支持-->
+			<li>网址：<input type="url"></li><!-- chrome，Firefox支持，Safari，ie不支持-->
+			<li>手机号码：<input type="tel"></li>
+			<li>提交：<input type="submit"></li>
+		</ul>
+		 </form>
+	</body>
 </html>
